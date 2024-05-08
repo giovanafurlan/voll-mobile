@@ -9,7 +9,7 @@ interface EntradaTextoProps extends ITextProps {
 export function EntradaTexto({ label, placeholder }: EntradaTextoProps) {
   return (
     <FormControl mt={3}>
-      <FormControl.Label>{label}</FormControl.Label>
+      {label != "" && <FormControl.Label>{label}</FormControl.Label>}
       <Input
         placeholder={placeholder}
         size="lg"
